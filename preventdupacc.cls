@@ -6,7 +6,7 @@ trigger AccountDuplicateTrigger on Account (before insert, before the update)
  “;
  if(acc.size()>0)
  {
- acc.Name.addError('You Cannot Create the Duplicate Account');
+ acc.Name.addError('You Cannot Create the Duplicate Account'); 
  }
  }
  }
