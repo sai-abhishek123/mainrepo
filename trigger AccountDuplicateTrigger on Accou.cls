@@ -8,4 +8,4 @@ trigger AccountDuplicateTrigger on Account (before insert, before the update)
  acc.Name.addError('You Cannot Create the Duplicate Account'); 
  }
  }
- }
+}
