@@ -4,5 +4,5 @@ trigger dup1 on Opportunity (before insert) {
         if(opp.size()>0){
             c.addError('Cant insert existing opportunity');
         }
-    }  
+    } 
 }
