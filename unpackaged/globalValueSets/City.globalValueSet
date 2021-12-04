@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Kakinada</fullName>
+        <default>false</default>
+        <label>Kakinada</label>
+    </customValue>
+    <customValue>
+        <fullName>Hyderabad</fullName>
+        <default>false</default>
+        <label>Hyderabad</label>
+    </customValue>
+    <customValue>
+        <fullName>Visakhapatnam</fullName>
+        <default>false</default>
+        <label>Visakhapatnam</label>
+    </customValue>
+    <customValue>
+        <fullName>Vijayawada</fullName>
+        <default>false</default>
+        <label>Vijayawada</label>
+    </customValue>
+    <customValue>
+        <fullName>Kodad</fullName>
+        <default>false</default>
+        <label>Kodad</label>
+    </customValue>
+    <masterLabel>CIty</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
