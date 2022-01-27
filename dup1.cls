@@ -5,4 +5,4 @@ trigger dup1 on Opportunity (before insert) {
             c.addError('Cant insert existing opportunity');
         }
     } 
-}
+} 
