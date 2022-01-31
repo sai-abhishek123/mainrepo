@@ -1,0 +1,31 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 31.01.2022 11:06:29
+// Design Name: 
+// Module Name: test
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module test(
+    input a,
+    input b,
+    input c,
+    input d,
+    output z
+    );
+    assign z=(a|b)&(c|d);
+endmodule
