@@ -1,10 +1,8 @@
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
-int main()
+int driver(n)
 {
-    int n;
-    scanf("%d",&n);
     while(n>=1)
     {
     char a[12];
