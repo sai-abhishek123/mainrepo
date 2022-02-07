@@ -1,0 +1,19 @@
+all: hello
+
+hello: cal.o quadratic.o sum.o triples.o
+	cc cal.o quadratic.o sum.o triples.o -o shellop -lm
+
+cal.o: cal.c
+	cc -c cal.c -lm
+
+quadratic.o: quadratic.c
+	cc -c quadratic.c -lm
+
+triples.o: triples.c
+	cc -c triples.c -lm
+
+sum.o: sum.c
+	cc -c sum.c -lm
+
+clean:
+	rm -rf *o hello
