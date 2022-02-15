@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>FedEx</fullName>
+        <default>false</default>
+        <label>FedEx</label>
+    </customValue>
+    <customValue>
+        <fullName>UPS</fullName>
+        <default>false</default>
+        <label>UPS</label>
+    </customValue>
+    <customValue>
+        <fullName>USPS</fullName>
+        <default>false</default>
+        <label>USPS</label>
+    </customValue>
+    <customValue>
+        <fullName>PriorityAustralia</fullName>
+        <default>false</default>
+        <label>PriorityAustralia</label>
+    </customValue>
+    <customValue>
+        <fullName>IPEC</fullName>
+        <default>false</default>
+        <label>IPEC</label>
+    </customValue>
+    <customValue>
+        <fullName>Easyship</fullName>
+        <default>false</default>
+        <label>Easyship</label>
+    </customValue>
+    <customValue>
+        <fullName>Fastway</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Fastway</label>
+    </customValue>
+    <masterLabel>Shipping Carrier</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Send mail when new lead is created</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>New_Lead</letterhead>
+    <name>New Lead</name>
+    <style>freeForm</style>
+    <subject>Welcome to ORG</subject>
+    <textOnly>Hello {!Lead.Name},
+
+Pleasure to have you on board.
+
+Thank you.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

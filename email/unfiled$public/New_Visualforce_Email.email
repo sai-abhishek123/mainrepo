@@ -1,0 +1,6 @@
+<messaging:emailTemplate subject="Hello" recipientType="User" relatedToType="Account">
+<messaging:plainTextEmailBody >
+Hello .
+Welcome to a new mail from Visualforce.
+</messaging:plainTextEmailBody>
+</messaging:emailTemplate>

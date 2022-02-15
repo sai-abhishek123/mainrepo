@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Sick Leave</fullName>
+        <default>false</default>
+        <label>Sick Leave</label>
+    </customValue>
+    <customValue>
+        <fullName>Casual Leave</fullName>
+        <default>false</default>
+        <label>Casual Leave</label>
+    </customValue>
+    <masterLabel>Leave Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

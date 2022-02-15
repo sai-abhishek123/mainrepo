@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Carrier Name --></label>
+        <name>Astonous_SM__Carrier_Name__c</name>
+        <relationshipLabel><!-- Shipping Carrier Plug-in Mappings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shipping Manager Apex Class --></label>
+        <name>Astonous_SM__Shipping_Manager_Apex_Class__c</name>
+    </fields>
+</CustomObjectTranslation>

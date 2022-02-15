@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Store Shipping Carrier and Custom Plug-In mapping. This enable to build shipping Plug-In outside of Managed Package</description>
+    <fields>
+        <fullName>Astonous_SM__Carrier_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Carrier Name</label>
+        <referenceTo>Astonous_SM__Shipment_Carrier__mdt</referenceTo>
+        <relationshipLabel>Shipping Carrier Plug-in Mappings</relationshipLabel>
+        <relationshipName>Shipping_Carrier_Plug_in_Mappings</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Astonous_SM__Shipping_Manager_Apex_Class__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Shipping Manager Apex Class</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Shipping Carrier Plug-in Mapping</label>
+    <pluralLabel>Shipping Carrier Plug-in Mappings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

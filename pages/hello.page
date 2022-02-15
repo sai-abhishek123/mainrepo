@@ -1,0 +1,14 @@
+<apex:page >
+    <apex:pageBlock title="Introduction to Visualforce Page">
+        <apex:pageBlockSection title="My First VF Demo">
+	    	<h1 style="color:red">Hello I am VF Page</h1>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="My Second VF Demo">
+            <h1 style="color:red;font-size:20px">{!2*10}</h1><br/>
+            <h1 style="color:red;font-size:20px">{!today()}</h1><br/>
+            <h1 style="color:red;font-size:20px">{! $user.userName}</h1><br/>
+            <h1 style="color:red;font-size:20px">{! $user.firstName}</h1><br/>
+            <h1 style="color:red;font-size:20px">{! $user.lastName}</h1><br/>
+        </apex:pageBlockSection>
+    </apex:pageBlock>    
+</apex:page>

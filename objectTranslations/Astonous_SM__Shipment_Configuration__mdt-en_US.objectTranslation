@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- API Name of field which store Delivery Date --></help>
+        <label><!-- Delivery Date Field --></label>
+        <name>Astonous_SM__Delivery_Date_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of object to stamp tracking updates --></help>
+        <label><!-- Object Name --></label>
+        <name>Astonous_SM__Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Carrier Field --></label>
+        <name>Astonous_SM__Shipping_Carrier_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field API name that store tracking number --></help>
+        <label><!-- Tracking Number Field --></label>
+        <name>Astonous_SM__Tracking_Number_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field API name to capture Status --></help>
+        <label><!-- Tracking Status Field --></label>
+        <name>Astonous_SM__Tracking_Status_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of Shipment Tracking status description field. Field store more details of Status that are returned from shipping carrier. --></help>
+        <label><!-- Tracking Status Information Field --></label>
+        <name>Astonous_SM__Tracking_Status_Information_Field__c</name>
+    </fields>
+</CustomObjectTranslation>
