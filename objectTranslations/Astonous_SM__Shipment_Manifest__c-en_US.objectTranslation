@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Pickup Address --></label>
+        <name>Astonous_SM__Pickup_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raw Data --></label>
+        <name>Astonous_SM__Raw_Data__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response ID --></label>
+        <name>Astonous_SM__Response_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Message --></label>
+        <name>Astonous_SM__Response_Message__c</name>
+    </fields>
+</CustomObjectTranslation>

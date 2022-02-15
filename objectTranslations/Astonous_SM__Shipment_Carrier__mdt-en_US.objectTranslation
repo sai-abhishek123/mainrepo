@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Active --></label>
+        <name>Astonous_SM__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Support Manifest Creation ? --></label>
+        <name>Astonous_SM__Support_Manifest_Creation__c</name>
+    </fields>
+</CustomObjectTranslation>

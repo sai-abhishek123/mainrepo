@@ -1,0 +1,232 @@
+<apex:page controller="Astonous_SM.TollManifestCtrl" renderAs="pdf" showheader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false">
+    <head>
+        <style type="text/css">
+            .TollHeading{font-size:15.1px;font-weight:bold;font-style:normal;}
+            table {
+                border-collapse: collapse;white-space: pre-wrap;font-size:9.0px;font-weight:bold;
+            } 
+            th {
+                text-align: center;
+            }
+            .dgtable{
+                border: 1px solid black;
+            }
+            .rowborder{
+                border-bottom: 1px solid black;
+                border-bottom: 1px solid black;
+            }
+        </style>
+        <style type="text/css" media="print">
+        @page {
+            size: A4 landscape;
+
+            /* ISO/JIS A4 (210mm�297mm) */
+
+            margin: 5mm;
+            @top-center {
+                content: element(header);
+            }
+            @bottom-left {
+                content: element(footer);
+            }
+        }
+
+        div.header {
+            padding: 10px;
+            position: running(header);
+        }
+
+        div.footer {
+            display: block;
+            text-align: right;
+            padding: 5px;
+            margin-bottom: 5px;
+            position: running(footer);
+        }
+
+        .pagenumber:before {
+            content: counter(page);
+        }
+
+        .pagecount:before {
+            content: counter(pages);
+        }
+        .rowborder{
+                border-bottom: 1px solid black;
+        }
+        @page: first {
+            size: A4 landscape;
+            /* ISO/JIS A4 (210mm�297mm) */
+            
+            margin: 5mm;
+            margin-top: 3mm;
+            margin-bottom: 3mm;
+        }
+        </style>       
+    </head>
+    <body>
+        <div  class="content" style="font-family:Times,serif;text-decoration: none; width:100%;">
+            <span class="TollHeading"><center>MANIFEST FOR Toll {!pickupReq.shippingCarrier}</center></span>
+            <div style="text-align: right;">
+                <apex:outputText value="Printed Date: {0,date,DD MMM yyyy HH:mm:ss a}">
+                    <apex:param value="{!NOW()}"/>
+                 </apex:outputText>
+P                 <b> &nbsp;&nbsp; Manifest ID: </b>{!manifestNumber}
+                <b>&nbsp;&nbsp;Dispatch Date: 
+                    </b> 
+                    <apex:outputText value="{0,date,DD MMM yyyy}">
+                        <apex:param value="{!pickupReq.dispatchDate}"/>
+                     </apex:outputText>
+                     <b>
+                    &nbsp;&nbsp;Sender:</b>{!pickupReq.pickupAddress.companyName} {!pickupReq.pickupAddress.contactPersonName}, {!pickupReq.pickupAddress.streetLine},
+                    {!pickupReq.pickupAddress.city},  {!pickupReq.pickupAddress.state},  {!pickupReq.pickupAddress.postalCode},  {!pickupReq.pickupAddress.country}
+            </div>
+            <div>
+                <apex:repeat value="{!qrCodes}" var="qrCode">
+                    <apex:image style="width: 39mm;height: 39mm;" value="https://bwipjs-api.metafloor.com/?bcid=qrcode&text={!qrCode}&eclevel=H"/>
+                </apex:repeat>
+            </div>   
+            <div style="background-color: black; color: white; width: 40px;margin-left: 10px;">
+                1 of 1
+            </div>   
+            <br/>  
+        <div>
+            <table style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th rowspan="2" class="dgtable">PAYER ACCOUNT</th>
+                        <th rowspan="2" class="dgtable">SERVICE METHOD</th>
+                        <th rowspan="2" class="dgtable">CONNOTE ID</th>
+                        <th rowspan="2" class="dgtable">RECEIVER</th>
+                        <th rowspan="2" class="dgtable">RECEIVERS SUBURB</th>
+                        <th rowspan="2" class="dgtable">POST CODE</th>
+                        <th colspan="5" class="dgtable">DANGEROUS GOODS</th>
+                        <th rowspan="2" class="dgtable">TOTAL ITEMS</th>
+                        <th rowspan="2" class="dgtable">MASS (kg)</th>
+                        <th rowspan="2" class="dgtable">CUBIC(m3)</th>
+                        <th colspan="3" class="dgtable">PALLETS</th>
+                        <th rowspan="2" class="dgtable">CONNOTE BARCODE</th>
+                    </tr>
+                    <tr>
+                        <th class="dgtable">UN Code</th>
+                        <th class="dgtable">Class</th>
+                        <th class="dgtable">Sub Hazard</th>
+                        <th class="dgtable">Group</th>
+                        <th class="dgtable">Wgt (kg)</th>
+                        <th class="dgtable">Chep</th>
+                        <th class="dgtable">Loscam</th>
+                        <th class="dgtable">Other</th>
+                    </tr>
+                    <apex:repeat value="{!shipmentList}" var="shipmentRec">
+                       <tr>
+                           <td>{!payerAccount}</td>
+                           <td>{!shipmentRec.Astonous_SM__Shipment_Service_Type__c}</td>
+                           <td>{!shipmentRec.Astonous_SM__Master_Tracking_Number__c}</td>
+                           <td>
+                               
+                               <apex:outputPanel rendered="{!ISBLANK(shipmentRec.Astonous_SM__Recipient_Company__c)}">
+                                    {!shipmentRec.Astonous_SM__Recipient_Name__c}
+                              </apex:outputPanel>                               
+                               <apex:outputPanel rendered="{!NOT(ISBLANK(shipmentRec.Astonous_SM__Recipient_Company__c))}">
+                                {!shipmentRec.Astonous_SM__Recipient_Company__c}
+                              </apex:outputPanel>
+                           </td>
+                           <td>{!shipmentRec.Recipient_City__c}</td>
+                           <td>{!shipmentRec.Recipient_Postal_Code__c}</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td>{!shipmentRec.Total_Packages__c}</td>
+                           <td>{!shipmentRec.Total_Weight__c}</td>
+                           <td>{!shipmentRec.Raw_Data__c}</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                       </tr>
+                       <tr class="rowborder">
+                           <td colspan="18" class="rowborder">
+                            References:
+                           </td>
+                       </tr>
+                    </apex:repeat>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="9" class="dgtable">TOTALS: {!pickupReq.totalShipmentCount}</td>
+                        <td class="dgtable">{!pickupReq.totalPackageCount}</td>
+                        <td class="dgtable">{!pickupReq.totalWeight}</td>
+                        <td class="dgtable"></td>
+                        <td colspan="4" class="dgtable"></td>
+                    </tr>
+                </thead>
+            </table>
+            <div>
+            <table style="width: 100%;margin-left: 70px;">
+                <tr>
+                    <td style="font-size: 10.1px;">
+                        CONSIGNMENTS DO NOT CONTAIN DANGEROUS GOODS 
+                    </td>
+                    <td rowspan="2">
+                        <table class="dgtable">
+                            <thead>
+                                <tr>
+                                    <td class="dgtable">PALLETS</td>
+                                    <td class="dgtable">TO TOLL</td>
+                                    <td class="dgtable">FROM TOLL</td>
+                                </tr>
+                                <tr>
+                                    <td class="dgtable">Chep</td>
+                                    <td class="dgtable">0</td>
+                                    <td class="dgtable"></td>
+                                </tr>
+                                <tr>
+                                    <td class="dgtable">Loscam</td><td class="dgtable">0</td><td class="dgtable"></td>
+                                </tr>
+                                <tr>
+                                    <td class="dgtable">Other</td><td class="dgtable">0</td><td class="dgtable"></td>
+                                </tr>
+                                <tr>
+                                    <td class="dgtable">Chep Other</td><td class="dgtable">0</td><td class="dgtable"></td>
+                                </tr>
+                                <tr>
+                                    <td class="dgtable">Loscam Other</td><td class="dgtable">0</td><td class="dgtable"></td>
+                                </tr>                                                                                           
+                            </thead>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10.1px;">IF THE GOODS ARE DANGEROUS IN NATURE THE SENDER <br/>MUST DECLARE THEM ACCORDING TO SECTION 4 OF THE <br/>AUSTRALIAN CODE FOR THE TRANSPORTATION OF <br/>DANGEROUS GOODS BY ROAD, RAIL OR SEA.</td>
+                </tr>
+                <tr>
+                    <td>I HEREBY DECLARE THAT THESE CONSIGNMENTS DO NOT CONTAIN DANGEROUS GOODS, <br/>AND THAT THESE CONSIGNMENTS DO NOT CONTAIN ANY UNAUTHORISED EXPLOSIVE OR <br/>INCENDIARY DEVICES. PLEASE ACCEPT FOR CARRIAGE THE GOOD DESCRIBED HEREON <br/>SUBJECT TO THE TERMS AND CONDITIONS OF THE CARRIER. I AM ALSO AWARE THAT THESE <br/>CONSIGNMENTS WILL BE SUBJECT TO SECURITY SCREENING AND CLEARING.
+                    </td>
+                    <td>GOODS DESCRIBED HEREON NUMBERING 5 ITEMS RECEIVED FOR <br/>CARRIAGE IN ACCORDANCE WITH CARRIER'S CONDITION OF TRANSPORT
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sender's Signature: __________________________________________
+                    </td>
+                    <td>Driver's Signature: __________________________________________</td>
+                </tr>
+                <tr>
+                    <td>Date: ______________________________</td>
+                    <td>Date: ______________________________</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Fleet Number: __________________________________________</td>
+                </tr>
+            </table>
+        </div>
+            <br/>
+        </div>
+        <div class="footer">
+            <div>Page <span class="pagecount"/>
+        </div>
+      </div>
+</div>
+ </body>
+</apex:page>

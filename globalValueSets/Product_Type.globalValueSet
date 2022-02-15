@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Hand Sanitizer</fullName>
+        <default>false</default>
+        <label>Hand Sanitizer</label>
+    </customValue>
+    <customValue>
+        <fullName>Hand Wash</fullName>
+        <default>false</default>
+        <label>Hand Wash</label>
+    </customValue>
+    <customValue>
+        <fullName>PPE Kits</fullName>
+        <default>false</default>
+        <label>PPE Kits</label>
+    </customValue>
+    <customValue>
+        <fullName>Hand Gloves</fullName>
+        <default>false</default>
+        <label>Hand Gloves</label>
+    </customValue>
+    <customValue>
+        <fullName>Soaps</fullName>
+        <default>false</default>
+        <label>Soaps</label>
+    </customValue>
+    <masterLabel>Product Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

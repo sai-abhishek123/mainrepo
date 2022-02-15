@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipping Soon</fullName>
+        <default>false</default>
+        <label>Shipping Soon</label>
+    </customValue>
+    <customValue>
+        <fullName>In Transit</fullName>
+        <default>false</default>
+        <label>In Transit</label>
+    </customValue>
+    <customValue>
+        <fullName>Delivery Delay</fullName>
+        <default>false</default>
+        <label>Delivery Delay</label>
+    </customValue>
+    <customValue>
+        <fullName>Enroute</fullName>
+        <default>false</default>
+        <label>Enroute</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipped</fullName>
+        <default>false</default>
+        <label>Shipped</label>
+    </customValue>
+    <customValue>
+        <fullName>Out for Delivery</fullName>
+        <default>false</default>
+        <label>Out for Delivery</label>
+    </customValue>
+    <customValue>
+        <fullName>Delivered</fullName>
+        <default>false</default>
+        <label>Delivered</label>
+    </customValue>
+    <customValue>
+        <fullName>Hold at Location</fullName>
+        <default>false</default>
+        <label>Hold at Location</label>
+    </customValue>
+    <customValue>
+        <fullName>Shipment Deleted</fullName>
+        <default>false</default>
+        <label>Shipment Deleted</label>
+    </customValue>
+    <customValue>
+        <fullName>Delivery Exception</fullName>
+        <default>false</default>
+        <label>Delivery Exception</label>
+    </customValue>
+    <customValue>
+        <fullName>Return to Shipper</fullName>
+        <default>false</default>
+        <label>Return to Shipper</label>
+    </customValue>
+    <customValue>
+        <fullName>Delayed</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Delayed</label>
+    </customValue>
+    <masterLabel>Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

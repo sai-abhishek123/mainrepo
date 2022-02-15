@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable">
+    <div class="slds-p-around_small">
+		hello World
+    </div>
+</aura:component>

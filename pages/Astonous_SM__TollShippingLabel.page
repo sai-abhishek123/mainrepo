@@ -1,0 +1,105 @@
+<apex:page renderAs="pdf" controller="Astonous_SM.TollShippingLabelCtrl" showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+   <html>
+      <head>
+         <style type="text/css">
+             @page { margin: 0.15in; size: 4.5in 7.5in; }
+            div.cls_002{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:7.5px;color:rgb(0,0,0);font-weight:normal;}
+            div.cls_003{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:9.1px;color:rgb(0,0,0);font-weight:bold;}
+            div.cls_005{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:7.5px;color:rgb(255,255,255);font-weight:bold;}
+            div.cls_006{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:10.5px;color:rgb(0,0,0);font-weight:bold;}
+            div.cls_007{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:10.1px;color:rgb(0,0,0);font-weight:normal;}
+            div.cls_008{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:12.1px;color:rgb(0,0,0);font-weight:bold;}
+            div.cls_009{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:14.1px;color:rgb(0,0,0);font-weight:bold;}
+            div.cls_010{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:7.0px;color:rgb(0,0,0);font-weight:bold;}
+            div.cls_011{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;}
+            div.cls_013{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:7.0px;color:rgb(0,0,0);font-weight:bold;}
+           .cls_015{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:7.5px;color:rgb(0,0,0);font-weight:bold;}
+           div.cls_012{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:10.0px;color:rgb(0,0,0);font-weight:bold;}
+           div.cls_019{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:7.0px;color:rgb(0,0,0);font-weight:normal;}
+           div.cls_021{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:10.0px;color:rgb(0,0,0);font-weight:normal;}
+           div.cls_022{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:8.5px;color:rgb(0,0,0);font-weight:bold;}
+           div.cls_023{font-family:Verdana, Geneva, Tahoma, sans-serif;font-size:8.5px;color:rgb(0,0,0);font-weight:normal;}
+         </style>
+      </head>
+      <body style="height: 172mm;width: 104mm;">
+         <div style="position:absolute;top:0px;height: 172mm;width: 104mm;border-style:outset;overflow:hidden">
+           
+               <apex:image value="{!URLFOR($Resource.Astonous_SM__Toll_Portrait_Label)}" style="position:absolute;top:0mm;left:0mm; height: 150mm;width: 104mm;"/> 
+         
+               <div style="position: absolute;left:4.1mm;top:0.6mm;"><apex:image value="{!URLFOR($Resource.Astonous_SM__Toll_Logo)}" style="height:12mm;height:4mm;"/> </div>
+            <div style="position:absolute;left:24mm;top:2.2mm;" class="cls_002">{!ratingReq.shippingCarrier}</div>
+            <div style="position:absolute;left:50mm;top:2.2mm;" class="cls_002">
+                  <apex:outputText styleClass="topHeading" value="DESP: {0,date,dd/MM/yyyy}">
+                     <apex:param value="{!ratingReq.shipDate}" />
+                  </apex:outputText>
+            </div>
+            <div style="position:absolute;left:77.3mm;top:4mm;" class="cls_003">{!depotCode}</div>
+            <div style="position:absolute;left:89.5mm;top:4mm;" class="cls_003">
+                     <apex:outputPanel rendered="{!NOT(ratingReq.recipientInfomration.isItResidentialAddress)}">B</apex:outputPanel>
+                     <apex:outputPanel rendered="{!ratingReq.recipientInfomration.isItResidentialAddress}">R</apex:outputPanel>
+            </div>
+            <div style="position:absolute;left:3.4mm;top:6.5mm;" class="cls_005">{!serviceNameLabel}</div>
+
+            <div style="position:absolute;left:2.4mm;top:11.1mm;" class="cls_006">CONNOTE #: {!shipmentID}</div>
+
+            <div style="position:absolute;left:2.4mm;top:14.8mm;" class="cls_006"><sup>TO:</sup><span style="font-weight: normal;">
+               <apex:outputPanel rendered="{!NOT(ISBLANK(ratingReq.recipientInfomration.companyName))}">
+                 {!ratingReq.recipientInfomration.companyName}
+               </apex:outputPanel>
+               <apex:outputPanel rendered="{!ISBLANK(ratingReq.recipientInfomration.companyName)}">
+                 {!ratingReq.recipientInfomration.contactPersonName}
+               </apex:outputPanel>               
+            </span> </div>
+            <div style="position:absolute;left:2.1mm;top:21.1mm;" class="cls_002">{!ratingReq.recipientInfomration.streetLine}</div>
+            <div style="position:absolute;left:2.4mm;top:27.1mm;" class="cls_008">{!ratingReq.recipientInfomration.city}</div>
+            <div style="position:absolute;left:2.4mm;top:31.2mm;" class="cls_009">{!ratingReq.recipientInfomration.state}</div>
+            <div style="position:absolute;left:32.2mm;top:31.2mm;" class="cls_006">{!ratingReq.recipientInfomration.postalCode}</div>
+            <div style="position:absolute;left:2.4mm;top:35.8mm;" class="cls_010">Australia</div>
+            <div style="position:absolute;left:2.4mm;top:39.5mm;" class="cls_011">Phone:&nbsp;{!ratingReq.recipientInfomration.phoneNumber}</div>
+            <div style="position:absolute;left:2.4mm;top:42.7mm;" class="cls_011">Contact:&nbsp;{!ratingReq.recipientInfomration.contactPersonName}</div>
+            <div style="position:absolute;left:2.4mm;top:49mm;" class="cls_013">Special Instructions:</div>
+            <div style="position:absolute;left:3.6mm;top:63.9mm;" class="cls_015">DG's:</div>
+            <div style="position:absolute;left:3.6mm;top:65.9mm;" class="cls_015">No</div>
+            <apex:outputPanel rendered="{!ratingReq.signatureOption == 'NO_SIGNATURE_REQUIRED'}">
+               <div style="position:absolute;left:30.2mm;top:63.9mm;" class="cls_015">NSR</div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!ratingReq.signatureOption != 'NO_SIGNATURE_REQUIRED'}">
+               <div style="position:absolute;left:30.2mm;top:62.9mm;font-weight: bold;" class="cls_015">Signature</div>
+               <div style="position:absolute;left:30.2mm;top:65.9mm;font-weight: bold;" class="cls_015">Required</div>
+            </apex:outputPanel>           
+            <div style="position:absolute;left:73mm;top:61.9mm;" class="cls_013"> L:{!shippingPackage.dimensionsLength} {!ratingReq.linearUnit}</div>
+            <div style="position:absolute;left:73mm;top:63.9mm;;" class="cls_013">W:{!shippingPackage.dimensionsWidth} {!ratingReq.linearUnit}</div>
+            <div style="position:absolute;left:88.7mm;top:64.2mm" class="cls_013">{!shippingPackage.weight}{!ratingReq.weightUnit}</div>
+            <hr class="solid" style="position:absolute;left:5.2mm;top:81.9mm;"/>
+            
+            <div style="position:absolute;left:59.3mm;top:63.9mm;" class="cls_012">{!packageIndex} of {!totalPackageCount}</div>
+            <div style="position:absolute;left:73mm;top:65.9mm;" class="cls_013">H:{!shippingPackage.dimensionsHeight} {!ratingReq.linearUnit}</div>
+            <div style="position:absolute;left:10.4mm;top:145.7mm;" class="cls_012">FROM:</div>
+            <div style="position:absolute;left:19.8mm;top:145.7mm;" class="cls_011">{!ratingReq.senderInfomration .companyName} {!ratingReq.senderInfomration.contactPersonName}</div>
+            <div style="position:absolute;left:55.6mm;top:149.2mm;" class="cls_012">Payor A/C:  {!payerAccountCode}</div>
+            <div style="position:absolute;left:10.4mm;top:149.9mm;" class="cls_011">{!ratingReq.senderInfomration.city}  {!ratingReq.senderInfomration.state}</div>
+            <div style="position:absolute;left:55.6mm;top:156.4mm;" class="cls_012">Contact:  {!ratingReq.senderInfomration.contactPersonName} </div>
+            <div style="position:absolute;left:10.4mm;top:153.2mm;" class="cls_011">{!ratingReq.senderInfomration.postalCode} </div>
+            <div style="position:absolute;left:22.1mm;top:153.2mm;" class="cls_012">Australia</div>
+            <div style="position:absolute;left:55.6mm;top:153.2mm;" class="cls_012">PH:{!ratingReq.senderInfomration.phoneNumber}</div>
+
+            <div style="position:absolute;left:10.4mm;top:156.5mm;" class="cls_021">REF:</div>
+            <div style="position:absolute;left:10.4mm;top:160.8mm;" class="cls_012">Description of Goods:</div>
+            <div class="cls_011" style="position:absolute;left:40.7mm;top:160.8mm;">   {!ratingReq.goodsDescription} </div>
+            <div style="position:absolute;left:10.4mm;top:163.9mm;" class="cls_022">DECLARATION BY:</div>
+            <div class="cls_023" style="position:absolute;left:33.3mm;top:163.9mm;"> {!ratingReq.senderInfomration.contactPersonName} </div>
+            <div style="position:absolute;left:10.4mm;top:167mm;" class="cls_021">I hereby declare that this consignment does not contain dangerous goods</div>
+            <div style="position:absolute;left:12.5mm;top:72.6mm;">
+               <apex:image value="https://bwipjs-api.metafloor.com/?bcid=code128&scaleY=3&text={!postcodeBarCodeNumber}&parsefnc&alttext={!postcodeBarCodeNumberAltText}&eclevel=H&width=60&height=12&textsize=5"/>
+            </div>
+            <div style="position:absolute;left:10.4mm;top:108.9mm;">
+               <apex:image value="https://bwipjs-api.metafloor.com/?bcid=code128&scale=3&text={!ssccItemBarCode}&parsefnc&alttext={!ssccItemBarCodeAltText}&eclevel=H&width=50&height=12&textsize=5"/>
+            </div>
+            
+            <div style="position:absolute;left:55.5mm;top:13.5mm;">
+               <apex:image value="https://bwipjs-api.metafloor.com/?bcid=qrcode&text={!quickResponseCode}&eclevel=H&scale=3&width=26&height=26" />
+            </div>
+         </div>
+      </body>
+   </html>
+</apex:page>

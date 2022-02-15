@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Dimension Unit --></label>
+        <name>Astonous_SM__Dimension_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Centimeters</masterLabel>
+            <translation><!-- Centimeters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inches</masterLabel>
+            <translation><!-- Inches --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Height --></label>
+        <name>Astonous_SM__Height__c</name>
+    </fields>
+    <fields>
+        <label><!-- Insured Value --></label>
+        <name>Astonous_SM__Insured_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length --></label>
+        <name>Astonous_SM__Length__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Astonous_SM__Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sequence Number --></label>
+        <name>Astonous_SM__Sequence_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipment --></label>
+        <name>Astonous_SM__Shipment__c</name>
+        <relationshipLabel><!-- Shipment Packages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tracking Number --></label>
+        <name>Astonous_SM__Tracking_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weight Unit --></label>
+        <name>Astonous_SM__Weight_Unit__c</name>
+        <picklistValues>
+            <masterLabel>KG</masterLabel>
+            <translation><!-- KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LB</masterLabel>
+            <translation><!-- LB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Weight of packet --></help>
+        <label><!-- Weight --></label>
+        <name>Astonous_SM__Weight__c</name>
+    </fields>
+    <fields>
+        <label><!-- Width --></label>
+        <name>Astonous_SM__Width__c</name>
+    </fields>
+</CustomObjectTranslation>

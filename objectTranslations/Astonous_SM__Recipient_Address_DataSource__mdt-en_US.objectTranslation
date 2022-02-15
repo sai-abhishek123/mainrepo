@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help><!-- API Name of object field --></help>
+        <label><!-- City Field API Name --></label>
+        <name>Astonous_SM__City_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of field that store Company Name(Optional) --></help>
+        <label><!-- Company Field API Name --></label>
+        <name>Astonous_SM__Company_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of Field that store Country --></help>
+        <label><!-- Country Field API Name --></label>
+        <name>Astonous_SM__Country_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of field that store Email(Optional). --></help>
+        <label><!-- Email Field API Name --></label>
+        <name>Astonous_SM__Email_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Field API Name of full Name --></help>
+        <label><!-- Full Name Field API Name --></label>
+        <name>Astonous_SM__Full_Name_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of field that store Phone Number --></help>
+        <label><!-- Phone Field API Name --></label>
+        <name>Astonous_SM__Phone_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of field that store postal code --></help>
+        <label><!-- Postal Code Field API Name --></label>
+        <name>Astonous_SM__Postal_Code_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of field that will be listed while searching recipients.For example; Name --></help>
+        <label><!-- Search Results Name Field --></label>
+        <name>Astonous_SM__Search_Results_Name_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of Custom field created on Shipment Object --></help>
+        <label><!-- Shipment Parent RelationShip Field --></label>
+        <name>Astonous_SM__Shipment_Parent_RelationShip_Field__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of field that store State --></help>
+        <label><!-- State Field API Name --></label>
+        <name>Astonous_SM__State_Field_API_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- API Name of field that store Street Address --></help>
+        <label><!-- Street Field API Name --></label>
+        <name>Astonous_SM__Street_Field_API_Name__c</name>
+    </fields>
+</CustomObjectTranslation>

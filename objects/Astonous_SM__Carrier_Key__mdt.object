@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Key-Value Pair additional carrier specific information</description>
+    <fields>
+        <fullName>Astonous_SM__Key__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Key</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Astonous_SM__Shipment_Carrier__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Shipment Carrier</label>
+        <referenceTo>Astonous_SM__Shipment_Carrier__mdt</referenceTo>
+        <relationshipName>Shipping_Carrier_Configuration</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Astonous_SM__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Value</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Carrier Key</label>
+    <listViews>
+        <fullName>Astonous_SM__All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Astonous_SM__Shipment_Carrier__c</columns>
+        <columns>Astonous_SM__Key__c</columns>
+        <columns>Astonous_SM__Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <pluralLabel>Carrier Keys</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

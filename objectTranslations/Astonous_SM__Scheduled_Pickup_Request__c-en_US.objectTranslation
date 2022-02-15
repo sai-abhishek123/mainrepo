@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Address --></label>
+        <name>Astonous_SM__Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Location --></label>
+        <name>Astonous_SM__Building_Location__c</name>
+        <picklistValues>
+            <masterLabel>Back Door</masterLabel>
+            <translation><!-- Back Door --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FRONT</masterLabel>
+            <translation><!-- FRONT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In/At Mailbox</masterLabel>
+            <translation><!-- In/At Mailbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Knock on Door/Ring Bell</masterLabel>
+            <translation><!-- Knock on Door/Ring Bell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail Room</masterLabel>
+            <translation><!-- Mail Room --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REAR</masterLabel>
+            <translation><!-- REAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reception</masterLabel>
+            <translation><!-- Reception --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SIDE</masterLabel>
+            <translation><!-- SIDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Side Door</masterLabel>
+            <translation><!-- Side Door --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Building Type --></label>
+        <name>Astonous_SM__Building_Type__c</name>
+        <picklistValues>
+            <masterLabel>APARTMENT</masterLabel>
+            <translation><!-- APARTMENT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BUILDING</masterLabel>
+            <translation><!-- BUILDING --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DEPARTMENT</masterLabel>
+            <translation><!-- DEPARTMENT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FLOOR</masterLabel>
+            <translation><!-- FLOOR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROOM</masterLabel>
+            <translation><!-- ROOM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SUITE</masterLabel>
+            <translation><!-- SUITE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Carrier Code --></label>
+        <name>Astonous_SM__Carrier_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>Astonous_SM__City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confirmation Number --></label>
+        <name>Astonous_SM__Confirmation_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Container Type/ Larget Item --></label>
+        <name>Astonous_SM__Container_Type__c</name>
+        <picklistValues>
+            <masterLabel>Box / Carton</masterLabel>
+            <translation><!-- Box / Carton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crate</masterLabel>
+            <translation><!-- Crate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jiffy Bag</masterLabel>
+            <translation><!-- Jiffy Bag --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Length</masterLabel>
+            <translation><!-- Length --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Letter / Satchel</masterLabel>
+            <translation><!-- Letter / Satchel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Applicable</masterLabel>
+            <translation><!-- Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PACKAGE</masterLabel>
+            <translation><!-- PACKAGE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PALLET</masterLabel>
+            <translation><!-- PALLET --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Skid</masterLabel>
+            <translation><!-- Skid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tube</masterLabel>
+            <translation><!-- Tube --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS LETTER</masterLabel>
+            <translation><!-- UPS LETTER --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Destination Country --></label>
+        <name>Astonous_SM__Destination_Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United States</masterLabel>
+            <translation><!-- United States --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The location information for the Carrier station handling the dispatch. --></help>
+        <label><!-- Dispatch Location --></label>
+        <name>Astonous_SM__Dispatch_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Access Time --></label>
+        <name>Astonous_SM__LastAccessTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>Astonous_SM__Message__c</name>
+    </fields>
+    <fields>
+        <help><!-- Fedex Package Return Program control number --></help>
+        <label><!-- PRP Control Number --></label>
+        <name>Astonous_SM__PRP_Control_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Postal Code --></label>
+        <name>Astonous_SM__Postal_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduled On --></label>
+        <name>Astonous_SM__Scheduled_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>Astonous_SM__Service_Type__c</name>
+        <picklistValues>
+            <masterLabel>ExpressMail</masterLabel>
+            <translation><!-- ExpressMail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FDXC(Cargo)</masterLabel>
+            <translation><!-- FDXC(Cargo) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FDXE (Express)</masterLabel>
+            <translation><!-- FDXE (Express) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FDXG (Ground)</masterLabel>
+            <translation><!-- FDXG (Ground) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FirstClass</masterLabel>
+            <translation><!-- FirstClass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>International</masterLabel>
+            <translation><!-- International --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Applicable</masterLabel>
+            <translation><!-- Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority Mail</masterLabel>
+            <translation><!-- Priority Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority Mail Express</masterLabel>
+            <translation><!-- Priority Mail Express --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Returns</masterLabel>
+            <translation><!-- Returns --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS 2nd Day Air</masterLabel>
+            <translation><!-- UPS 2nd Day Air --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS 2nd Day Air A.M.</masterLabel>
+            <translation><!-- UPS 2nd Day Air A.M. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS 3 Day Select</masterLabel>
+            <translation><!-- UPS 3 Day Select --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Basic</masterLabel>
+            <translation><!-- UPS Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Economy</masterLabel>
+            <translation><!-- UPS Economy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Express 12:00</masterLabel>
+            <translation><!-- UPS Express 12:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Express NA1</masterLabel>
+            <translation><!-- UPS Express NA1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Ground</masterLabel>
+            <translation><!-- UPS Ground --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Ground, UPS Standard</masterLabel>
+            <translation><!-- UPS Ground, UPS Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Intercity Today</masterLabel>
+            <translation><!-- UPS Intercity Today --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Next Day Air</masterLabel>
+            <translation><!-- UPS Next Day Air --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Next Day Air Early</masterLabel>
+            <translation><!-- UPS Next Day Air Early --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Next Day Air Saver</masterLabel>
+            <translation><!-- UPS Next Day Air Saver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Saver</masterLabel>
+            <translation><!-- UPS Saver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Standard</masterLabel>
+            <translation><!-- UPS Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Standard Today</masterLabel>
+            <translation><!-- UPS Standard Today --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Today Dedicated Courier</masterLabel>
+            <translation><!-- UPS Today Dedicated Courier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Today Express</masterLabel>
+            <translation><!-- UPS Today Express --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Today Express Saver</masterLabel>
+            <translation><!-- UPS Today Express Saver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Worldwide Expedited</masterLabel>
+            <translation><!-- UPS Worldwide Expedited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Worldwide Express</masterLabel>
+            <translation><!-- UPS Worldwide Express --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Worldwide Express Freight</masterLabel>
+            <translation><!-- UPS Worldwide Express Freight --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Worldwide Express Freight Midday</masterLabel>
+            <translation><!-- UPS Worldwide Express Freight Midday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS Worldwide Express Plus</masterLabel>
+            <translation><!-- UPS Worldwide Express Plus --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Shipping Carrier --></label>
+        <name>Astonous_SM__Shipping_Carrier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Shipments --></label>
+        <name>Astonous_SM__Show_Shipments__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>Astonous_SM__State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Astonous_SM__Status__c</name>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled</masterLabel>
+            <translation><!-- Scheduled --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>Astonous_SM__Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- SuiteOrApt --></label>
+        <name>Astonous_SM__SuiteOrApt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Weight Unit --></label>
+        <name>Astonous_SM__Weight_Unit__c</name>
+        <picklistValues>
+            <masterLabel>KG</masterLabel>
+            <translation><!-- KG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LB</masterLabel>
+            <translation><!-- LB --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

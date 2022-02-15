@@ -1,0 +1,5 @@
+Hello {!Opportunity.UserId},
+
+The status of your Opportunity has changed and is now {!Opportunity.Stage}.
+
+Thank you
