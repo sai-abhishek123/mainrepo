@@ -8,4 +8,4 @@ for i in range (1,c):
     sum=a+b
     b=a
     a=sum
-    print(sum)
+    print(sum)  
