@@ -34,55 +34,195 @@ void context_out (int pid)
 #define nullReady 0
    // when get_ready_process encoutered empty queue, nullReady is returned
 
-typedef struct ReadyNodeStruct
-{ int pid;
+typedef struct ReadyNodeStruct{ 
+  int pid;
   struct ReadyNodeStruct *next;
-} ReadyNode;
+}ReadyNode;
 
-ReadyNode *readyHead = NULL;
-ReadyNode *readyTail = NULL;
+ReadyNode *readyHead_Q1 = NULL;
+ReadyNode *readyTail_Q1 = NULL;
 
+ReadyNode *readyHead_Q2 = NULL;
+ReadyNode *readyTail_Q2 = NULL;
 
-void insert_ready_process (int pid)
-{ ReadyNode *node;
+ReadyNode *readyHead_Q3 = NULL;
+ReadyNode *readyTail_Q3 = NULL;
+
+ReadyNode *readyHead_Q4 = NULL;
+ReadyNode *readyTail_Q4 = NULL;
+
+void insert_ready_process_Q1 (int pid){
+  ReadyNode *node;
 
   node = (ReadyNode *) malloc (sizeof (ReadyNode));
   node->pid = pid;
   node->next = NULL;
-  if (readyTail == NULL) // readyHead would be NULL also
-    { readyTail = node; readyHead = node; }
+  if (readyTail_Q1 == NULL) // readyHead would be NULL also
+    { readyTail_Q1 = node; readyHead_Q1 = node; }
   else // insert to tail
-    { readyTail->next = node; readyTail = node; }
+    { readyTail_Q1->next = node; readyTail_Q1 = node; }
 }
 
-int get_ready_process ()
-{ ReadyNode *rnode;
+int get_ready_process_Q1(){
+  ReadyNode *rnode;
   int pid;
 
-  if (readyHead == NULL)
+  if (readyHead_Q1 == NULL)
   { if (cpuDebug) fprintf (bugF, "No ready process now!!!\n");
     return (nullReady); 
   }
   else
-  { pid = readyHead->pid;
-    rnode = readyHead;
-    readyHead = rnode->next;
+  { pid = readyHead_Q1->pid;
+    rnode = readyHead_Q1;
+    readyHead_Q1 = rnode->next;
     free (rnode);
-    if (readyHead == NULL) readyTail = NULL;
+    if (readyHead_Q1 == NULL) readyTail_Q1 = NULL;
   }
   return (pid);
 }
 
-void dump_ready_queue (FILE *outf)
+
+
+
+void insert_ready_process_Q2 (int pid){
+  ReadyNode *node;
+
+  node = (ReadyNode *) malloc (sizeof (ReadyNode));
+  node->pid = pid;
+  node->next = NULL;
+  if (readyTail_Q2 == NULL) // readyHead would be NULL also
+    { readyTail_Q2 = node; readyHead_Q2 = node; }
+  else // insert to tail
+    { readyTail_Q2->next = node; readyTail_Q2 = node; }
+}
+
+int get_ready_process_Q2(){
+  ReadyNode *rnode;
+  int pid;
+
+  if (readyHead_Q2 == NULL)
+  { if (cpuDebug) fprintf (bugF, "No ready process now!!!\n");
+    return (nullReady); 
+  }
+  else
+  { pid = readyHead_Q2->pid;
+    rnode = readyHead_Q2;
+    readyHead_Q2 = rnode->next;
+    free (rnode);
+    if (readyHead_Q2 == NULL) readyTail_Q2 = NULL;
+  }
+  return (pid);
+}
+
+
+
+
+
+
+void insert_ready_process_Q3 (int pid){
+  ReadyNode *node;
+
+  node = (ReadyNode *) malloc (sizeof (ReadyNode));
+  node->pid = pid;
+  node->next = NULL;
+  if (readyTail_Q3 == NULL) // readyHead would be NULL also
+    { readyTail_Q3 = node; readyHead_Q3 = node; }
+  else // insert to tail
+    { readyTail_Q3->next = node; readyTail_Q3 = node; }
+}
+
+int get_ready_process_Q3(){
+  ReadyNode *rnode;
+  int pid;
+
+  if (readyHead_Q3 == NULL)
+  { if (cpuDebug) fprintf (bugF, "No ready process now!!!\n");
+    return (nullReady); 
+  }
+  else
+  { pid = readyHead_Q3->pid;
+    rnode = readyHead_Q3;
+    readyHead_Q3 = rnode->next;
+    free (rnode);
+    if (readyHead_Q3 == NULL) readyTail_Q3 = NULL;
+  }
+  return (pid);
+}
+
+
+
+
+
+void insert_ready_process_Q4 (int pid){
+  ReadyNode *node;
+
+  node = (ReadyNode *) malloc (sizeof (ReadyNode));
+  node->pid = pid;
+  node->next = NULL;
+  if (readyTail_Q4 == NULL) // readyHead would be NULL also
+    { readyTail_Q4 = node; readyHead_Q4 = node; }
+  else // insert to tail
+    { readyTail_Q4->next = node; readyTail_Q4 = node; }
+}
+
+int get_ready_process_Q4(){
+  ReadyNode *rnode;
+  int pid;
+
+  if (readyHead_Q4 == NULL)
+  { if (cpuDebug) fprintf (bugF, "No ready process now!!!\n");
+    return (nullReady); 
+  }
+  else
+  { pid = readyHead_Q4->pid;
+    rnode = readyHead_Q4;
+    readyHead_Q4 = rnode->next;
+    free (rnode);
+    if (readyHead_Q4 == NULL) readyTail_Q4 = NULL;
+  }
+  return (pid);
+}
+
+
+void dump_ready_queue_Q1 (FILE *outf)
 { ReadyNode *node;
 
-  fprintf (outf, "******************** Ready Queue Dump\n");
-  node = readyHead;
+  fprintf (outf, "******************** Ready Queue1 Dump\n");
+  node = readyHead_Q1;
   while (node != NULL)
     { fprintf (outf, "%d, ", node->pid); node = node->next; }
   fprintf (outf, "\n");
 }
 
+void dump_ready_queue_Q2 (FILE *outf)
+{ ReadyNode *node;
+
+  fprintf (outf, "******************** Ready Queue2 Dump\n");
+  node = readyHead_Q2;
+  while (node != NULL)
+    { fprintf (outf, "%d, ", node->pid); node = node->next; }
+  fprintf (outf, "\n");
+}
+
+void dump_ready_queue_Q3 (FILE *outf)
+{ ReadyNode *node;
+
+  fprintf (outf, "******************** Ready Queue3 Dump\n");
+  node = readyHead_Q3;
+  while (node != NULL)
+    { fprintf (outf, "%d, ", node->pid); node = node->next; }
+  fprintf (outf, "\n");
+}
+
+void dump_ready_queue_Q4 (FILE *outf)
+{ ReadyNode *node;
+
+  fprintf (outf, "******************** Ready Queue4 Dump\n");
+  node = readyHead_Q4;
+  while (node != NULL)
+    { fprintf (outf, "%d, ", node->pid); node = node->next; }
+  fprintf (outf, "\n");
+}
 
 //=========================================================================
 // endIO list management
@@ -126,7 +266,7 @@ void endIO_moveto_ready ()
   sem_wait (&pmutex);
   while (endIOhead != NULL)
   { node = endIOhead;
-    insert_ready_process (node->pid);
+    insert_ready_process_Q1 (node->pid);
     PCB[node->pid]->exeStatus = eReady;
     endIOhead = node->next;
     free (node);
@@ -309,7 +449,8 @@ void execute_process ()
 { int pid, intime;
   genericPtr event;
 
-  pid = get_ready_process ();
+
+  pid = get_ready_process_Q1();
   if (pid != nullReady)
     // execute the ready process (with pid# = pid)
     //   before and after the execution, need to do:
@@ -322,28 +463,97 @@ void execute_process ()
     intime = CPU.numCycles;   // ===(4) 
     event = add_timer (cpuQuantum, CPU.Pid,  // == (3) 
                        actTQinterrupt, oneTimeTimer);
-    cpu_execution ();
-    context_out (pid);  // === (1)
-    PCB[pid]->timeUsed += (CPU.numCycles - intime);  // ===(4)
-    if (CPU.exeStatus == eReady) insert_ready_process (pid);  // === (2)
-    else if (CPU.exeStatus == ePFault || CPU.exeStatus == eWait) 
-      // eWait: should have been handled by instruction execution
-      // ePFault: calculate_memory_address should have set pFaultException,
-      //   which is subsequently handled by page_fault_handler
-      deactivate_timer (event);
-    else // CPU.exeStatus == eError or eEnd, exiting
-      { exiting_process (pid); deactivate_timer (event); }
-    // Why deactivate_timer?
-    //   If exeStatus != eReady ==> process is not stopped by time quantum
-    //   but timer is still there ==> should be deactivated
-    //   To deactivate: need the returned ptr from set timer: "event"
-    //   If not: it will impact the execution of the next process
-    // But if time quantum just expires and exeStatus != eReady
-    //   No problem! eReady is only set upon tqInterrupt (in cpu.c)
-    //    if the process had ePFault/eWait, it will not be set to eReady
+
+      cpu_execution ();
+      context_out (pid);  // === (1)
+      PCB[pid]->timeUsed += (CPU.numCycles - intime);  // ===(4)
+
+      if (CPU.exeStatus == eReady && (CPU.interruptV==CPU.interruptV | tqInterrupt)){
+          insert_ready_process_Q2 (pid);  // === (2)
+      }
+
+      else if (CPU.exeStatus == ePFault || CPU.exeStatus == eWait) 
+        // eWait: should have been handled by instruction execution
+        // ePFault: calculate_memory_address should have set pFaultException,
+        //   which is subsequently handled by page_fault_handler
+        deactivate_timer (event);
+      else // CPU.exeStatus == eError or eEnd, exiting
+        { exiting_process (pid); deactivate_timer (event); }
+      // Why deactivate_timer?
+      //   If exeStatus != eReady ==> process is not stopped by time quantum
+      //   but timer is still there ==> should be deactivated
+      //   To deactivate: need the returned ptr from set timer: "event"
+      //   If not: it will impact the execution of the next process
+      // But if time quantum just expires and exeStatus != eReady
+      //   No problem! eReady is only set upon tqInterrupt (in cpu.c)
+      //    if the process had ePFault/eWait, it will not be set to eReady
+  }else{
+
+      // insert_ready_process_Q2(pid);
+          pid = get_ready_process_Q2();
+          
+          if (pid != nullReady)
+          {
+            context_in (pid);
+            CPU.exeStatus = eRun;   
+            intime = CPU.numCycles;  
+            event = add_timer (2*cpuQuantum, CPU.Pid, actTQinterrupt, oneTimeTimer);
+
+              cpu_execution();
+              context_out (pid); 
+              PCB[pid]->timeUsed += (CPU.numCycles - intime); 
+
+              if (CPU.exeStatus == eReady && (CPU.interruptV==CPU.interruptV | tqInterrupt)){
+                insert_ready_process_Q3 (pid);  // === (2)
+              }else if (CPU.exeStatus == ePFault || CPU.exeStatus == eWait) 
+              deactivate_timer (event);
+              else // CPU.exeStatus == eError or eEnd, exiting
+              { exiting_process (pid); deactivate_timer (event); }
+          }else{
+
+                pid = get_ready_process_Q3();
+                if (pid != nullReady)
+                {
+                    context_in (pid);
+                    CPU.exeStatus = eRun;   
+                    intime = CPU.numCycles;  
+                    event = add_timer (3*cpuQuantum, CPU.Pid, actTQinterrupt, oneTimeTimer);
+
+                    cpu_execution();
+                    context_out (pid); 
+                    PCB[pid]->timeUsed += (CPU.numCycles - intime); 
+                    
+                    if (CPU.exeStatus == eReady && (CPU.interruptV==CPU.interruptV | tqInterrupt)){
+                        insert_ready_process_Q4 (pid);  // === (2)
+                    }else if (CPU.exeStatus == ePFault || CPU.exeStatus == eWait){ 
+                        deactivate_timer (event);
+                    }else // CPU.exeStatus == eError or eEnd, exiting
+                    { exiting_process (pid); deactivate_timer (event); }
+              
+                }else{
+
+
+                  pid = get_ready_process_Q4 ();
+                  if (pid != nullReady)
+                    { context_in (pid);   
+                      CPU.exeStatus = eRun;   
+                      intime = CPU.numCycles;   
+                      event = add_timer (4*cpuQuantum, CPU.Pid,  
+                                        actTQinterrupt, oneTimeTimer);
+                      cpu_execution ();
+                      context_out (pid);  
+                      PCB[pid]->timeUsed += (CPU.numCycles - intime);  
+                      if (CPU.exeStatus == eReady) insert_ready_process_Q4 (pid); 
+                      else if (CPU.exeStatus == ePFault || CPU.exeStatus == eWait) 
+                        deactivate_timer (event);
+                      else
+                        { exiting_process (pid); deactivate_timer (event); }
+                    }else execute_idle_process ();
+                    // no ready process in the system, so execute idle process
+                    // ===== see https://en.wikipedia.org/wiki/System_Idle_Process
+
+                }
+              }
   }
-  else execute_idle_process ();
-    // no ready process in the system, so execute idle process
-    // ===== see https://en.wikipedia.org/wiki/System_Idle_Process
 }
 
